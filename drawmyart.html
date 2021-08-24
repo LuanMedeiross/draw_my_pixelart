@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="styles.css">
+        <title>Draw My Art</title>
+    </head>
+
+    <body onmousedown="clicou()" onmouseup="soltou()">
+
+        <div id="geral">
+            <div id="opcoes">
+
+                <div id="tamanho">
+                    <h2 class="tamanho">Altura: <span id="an">26</span></h2>
+                    <input type="range" id="altura" max=50 min=1 onmousemove="ver_valor()">
+                    <br>
+                    <h2 class="tamanho">Largura: <span id="ln">26</span></h2> 
+                    <input type="range" id="largura" max=50 min=1 onmousemove="ver_valor()">
+                </div>
+
+                <br><br>
+
+                <div id="cor">
+                    <h3>Escolha a cor:</h3> 
+                    <input type="color" id="color" onmouseleave="trocar_cor(this.value)">
+                </div>
+            
+                <br><br>
+
+                <div id="botoes" style="margin-bottom: 10px">
+                    <button id="criar_grade" onclick="criar_grade()">Criar grade</button> <br> <br>
+                    
+                    <h3>Modo: <span id="modo">Pintar</span></h3>
+                    
+                    <button onclick="limpar()">Limpar</button> 
+                    <button onclick="apagar()">Apagar</button>
+                </div>
+            </div>
+            <div style="height: 620px;">
+                <div class="corpo" id="art" style="margin-left: 17em"></div>        
+            </div>
+        </div>
+         
+    </body>
+    
+    <script src="script.js"></script>
+</html>
